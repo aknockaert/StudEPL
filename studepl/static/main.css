@@ -1,0 +1,148 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 50px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+  
+  .bg-steel {
+    background-color: #5f788a;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #343A40;
+    color: #fff;
+    overflow-y: scroll;
+}
+
+a{
+    color: #ffffff;
+}
+a:hover{
+    color: #b9d5fd;
+}
+.collapse-sidebar-item{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.spacer{
+    padding-top: 20px;
+}
+#content{
+    padding-left: 260px;
+    padding-top: 20px;
+    padding-bottom: 65px;
+    padding-right: 30px;
+    margin: 30px;
+}
+
+#content h1, h2, h3, h4, h5, h6{
+    color: #343A40;
+}
+
+#content h4{
+    padding-left: 40px;
+}
+
+code {
+    font-family: monospace;
+}
+
+.card{
+    margin: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sb h1, .sb h2, .sb h3, .sb h4, .sb h5{
+    color: #ffffff;
+}
+
+.scroller{
+  padding-bottom: 70px;
+}

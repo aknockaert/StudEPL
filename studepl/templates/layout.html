@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>StudEPL</title>
+</head>
+<body>
+
+   <header class="site-header">
+       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+           <!-- Navbar left side -->
+           <div class="container">
+               <a class="navbar-brand mr-4" href="/">StudEPL</a>
+               
+           </div>
+
+           <!-- Navbar right side -->
+           <div class="container"></div>
+       </nav>
+   </header>
+
+   <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header sb">
+                <h3>LEPL1401 - Info 1</h3>
+            </div>
+    
+            <ul class="list-unstyled components sb">
+                <h5>Compléments TP</h5>
+
+                <div class="spacer"></div>
+                <div class="scroller">
+
+                {% for i in range(1,12) %}
+                    <li class="active">
+                        <a href="#Semaine{{i}}Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semaine {{i}}</a>
+                        <div class="collapse-sidebar-item">
+                                <ul class="collapse list-unstyled" id="Semaine{{i}}Submenu">
+                                <li>
+                                    <a href="{{ url_for('main.s1_theorie') }}">Rappels théoriques</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('main.s1_mission') }}">Mission {{i}}</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('main.s1_correctif') }}">Correctif</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                {% endfor %}
+
+            </div>
+    
+        </nav>
+        <!-- Page Content -->
+        <div id="content">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <!-- jQuery CDN - Slim version (=without AJAX) -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <!-- Popper.JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+     <!-- jQuery Custom Scroller CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+ 
+</body>
+</html>
